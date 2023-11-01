@@ -19,3 +19,17 @@ clearTimeout(setTimeout(greet1,2000,"vinay"))
         console.log(`Hello ${name}`)
         }
         clearInterval(setInterval(greet3,2000,"Viraj"))
+
+  //recursive set time out
+//   setTimeout(function run () {
+//       console.log("hello")
+//       setTimeout(run,1000)
+//     }, 1000);
+
+    const run = () =>{
+        console.log("hello")
+        setTimeout(run,1000) 
+    };
+    setTimeout(run,1000);
+
+       
