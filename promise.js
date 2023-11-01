@@ -1,49 +1,33 @@
-// //promises
-// const promise = new Promise((resolve,reject)=> {
-//     setTimeout(()=>{
+// let promise = new Promise (function(resolve,reject){
+//     const x = "geeksforgeeks";
+//     const y = "geeksforgeeks"
+//     if (x===y) {
+//         resolve();
+//     }else {
+//         reject();
+//     }
+// });
 
-//         resolve("Bringing tacos")
-            
-//     },5000)
+// promise.then (function(){
+//     console.log("sucess,y r geek");
 // })
-// //Reject scenario
-// const promise2 = new Promise((resolve,reject)=> {
-//     setTimeout(()=>{
+// .catch (function (){
+//     console.log("error occured");
+// });
 
-//         resolve("not bringing tacos,Food truck not there")
-            
-//     },5000)
-// })
-
-// Resolve scenario
-const promise = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        resolve("Bringing tacos");
-    }, 5000);
+let promise = new Promise (function(resolve,reject){
+    const x = "geeksforgeeks";
+    const y = "geeksforeeks"
+    if (x===y) {
+        resolve("correct");
+    }else {
+        reject("wrong");
+    }
 });
 
-// Handle the resolve scenario
-promise
-    .then((result) => {
-        console.log(result);
-    })
-    .catch((error) => {
-        console.error(error);
-    });
-
-// Reject scenario
-const promise2 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        reject("Not bringing tacos, food truck not there");
-    }, 5000);
+promise.then (function(sucess){
+    console.log(sucess);
+})
+.catch (function (error){
+    console.log(error);
 });
-
-// Handle the reject scenario
-promise2
-    .then((result) => {
-        console.log(result);
-    })
-    .catch((error) => {
-        console.error(error);
-    });
-
